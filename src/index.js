@@ -7,8 +7,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import rootReducer from './reducers';
-
-const store = createStore(rootReducer, {}, applyMiddleware());
+import think from './middleware/think';
+const store = createStore(rootReducer, {}, applyMiddleware(think));
 
 
 ReactDOM.render(
